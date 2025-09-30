@@ -1,0 +1,188 @@
+// Mock product data for the PWA Shop
+export const products = [
+  {
+    id: 1,
+    name: "Autumn Harvest Candle",
+    price: 24.99,
+    originalPrice: 29.99,
+    category: "Home & Decor",
+    image: "https://picsum.photos/seed/7829/600/400",
+    rating: 4.8,
+    reviews: 127,
+    description: "Hand-poured soy candle with warm autumn spices. Features notes of cinnamon, orange peel, and vanilla.",
+    inStock: true,
+    featured: true,
+    tags: ["candle", "home", "autumn", "scented"]
+  },
+  {
+    id: 2,
+    name: "Cozy Orange Throw Blanket",
+    price: 45.99,
+    originalPrice: 55.99,
+    category: "Home & Decor",
+    image: "https://picsum.photos/seed/4561/600/400",
+    rating: 4.6,
+    reviews: 89,
+    description: "Soft knitted throw blanket in warm orange tones. Perfect for cozy autumn evenings.",
+    inStock: true,
+    featured: true,
+    tags: ["blanket", "cozy", "orange", "home"]
+  },
+  {
+    id: 3,
+    name: "Pumpkin Spice Coffee Blend",
+    price: 16.99,
+    originalPrice: null,
+    category: "Food & Beverage",
+    image: "https://picsum.photos/seed/9247/600/400",
+    rating: 4.9,
+    reviews: 234,
+    description: "Premium coffee blend with natural pumpkin spice flavoring. Medium roast with hints of cinnamon and nutmeg.",
+    inStock: true,
+    featured: false,
+    tags: ["coffee", "pumpkin spice", "beverage", "autumn"]
+  },
+  {
+    id: 4,
+    name: "Maple Leaf Wall Art",
+    price: 32.99,
+    originalPrice: 39.99,
+    category: "Home & Decor",
+    image: "https://picsum.photos/seed/1638/600/400",
+    rating: 4.7,
+    reviews: 56,
+    description: "Beautiful autumn maple leaf canvas print. Adds warmth and natural beauty to any room.",
+    inStock: true,
+    featured: false,
+    tags: ["wall art", "maple", "autumn", "decor"]
+  },
+  {
+    id: 5,
+    name: "Harvest Moon Ceramic Mug",
+    price: 18.99,
+    originalPrice: null,
+    category: "Kitchen & Dining",
+    image: "https://picsum.photos/seed/5392/600/400",
+    rating: 4.5,
+    reviews: 92,
+    description: "Handcrafted ceramic mug with harvest moon design. Perfect for your morning coffee or evening tea.",
+    inStock: true,
+    featured: false,
+    tags: ["mug", "ceramic", "harvest", "kitchen"]
+  },
+  {
+    id: 6,
+    name: "Orange Spice Tea Collection",
+    price: 28.99,
+    originalPrice: 34.99,
+    category: "Food & Beverage",
+    image: "https://picsum.photos/seed/8745/600/400",
+    rating: 4.8,
+    reviews: 143,
+    description: "Curated collection of 6 orange and spice-infused teas. Includes chamomile orange, spiced chai, and cinnamon apple.",
+    inStock: true,
+    featured: true,
+    tags: ["tea", "spice", "orange", "collection"]
+  },
+  {
+    id: 7,
+    name: "Autumn Wreath",
+    price: 39.99,
+    originalPrice: 49.99,
+    category: "Home & Decor",
+    image: "https://picsum.photos/seed/2156/600/400",
+    rating: 4.9,
+    reviews: 78,
+    description: "Handmade autumn wreath with dried orange slices, cinnamon sticks, and seasonal foliage.",
+    inStock: false,
+    featured: true,
+    tags: ["wreath", "autumn", "decoration", "handmade"]
+  },
+  {
+    id: 8,
+    name: "Pumpkin Shaped Serving Bowl",
+    price: 22.99,
+    originalPrice: null,
+    category: "Kitchen & Dining",
+    image: "https://picsum.photos/seed/6983/600/400",
+    rating: 4.4,
+    reviews: 67,
+    description: "Ceramic serving bowl in charming pumpkin shape. Perfect for soups, salads, or seasonal displays.",
+    inStock: true,
+    featured: false,
+    tags: ["bowl", "pumpkin", "ceramic", "serving"]
+  },
+  {
+    id: 9,
+    name: "Cinnamon Bark Potpourri",
+    price: 14.99,
+    originalPrice: 19.99,
+    category: "Home & Decor",
+    image: "https://picsum.photos/seed/3427/600/400",
+    rating: 4.6,
+    reviews: 112,
+    description: "Natural potpourri blend with cinnamon bark, dried oranges, and autumn spices. Fills your home with seasonal fragrance.",
+    inStock: true,
+    featured: false,
+    tags: ["potpourri", "cinnamon", "fragrance", "natural"]
+  },
+  {
+    id: 10,
+    name: "Harvest Festival Cookbook",
+    price: 26.99,
+    originalPrice: 32.99,
+    category: "Books & Media",
+    image: "https://picsum.photos/seed/7891/600/400",
+    rating: 4.7,
+    reviews: 89,
+    description: "Collection of over 100 autumn recipes featuring seasonal ingredients. From pumpkin dishes to apple desserts.",
+    inStock: true,
+    featured: false,
+    tags: ["cookbook", "recipes", "harvest", "autumn"]
+  },
+  {
+    id: 11,
+    name: "Orange Wool Scarf",
+    price: 34.99,
+    originalPrice: 42.99,
+    category: "Fashion & Accessories",
+    image: "https://picsum.photos/seed/4529/600/400",
+    rating: 4.8,
+    reviews: 156,
+    description: "Luxurious merino wool scarf in warm orange hues. Hand-knitted with intricate cable pattern.",
+    inStock: true,
+    featured: true,
+    tags: ["scarf", "wool", "orange", "fashion"]
+  },
+  {
+    id: 12,
+    name: "Acorn Salt & Pepper Shakers",
+    price: 19.99,
+    originalPrice: null,
+    category: "Kitchen & Dining",
+    image: "https://picsum.photos/seed/9617/600/400",
+    rating: 4.3,
+    reviews: 43,
+    description: "Adorable acorn-shaped salt and pepper shakers. Adds whimsical autumn charm to your dining table.",
+    inStock: true,
+    featured: false,
+    tags: ["salt", "pepper", "acorn", "kitchen"]
+  }
+];
+
+export const categories = [
+  "All Categories",
+  "Home & Decor",
+  "Food & Beverage", 
+  "Kitchen & Dining",
+  "Fashion & Accessories",
+  "Books & Media"
+];
+
+export const priceRanges = [
+  { label: "All Prices", min: 0, max: Infinity },
+  { label: "Under $20", min: 0, max: 19.99 },
+  { label: "$20 - $30", min: 20, max: 30 },
+  { label: "$30 - $40", min: 30, max: 40 },
+  { label: "Over $40", min: 40, max: Infinity }
+];

@@ -1,10 +1,12 @@
 import { VitePWA } from 'vite-plugin-pwa';
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    tailwindcss(),
     react(),
     VitePWA({
       registerType: 'autoUpdate',
@@ -16,8 +18,8 @@ export default defineConfig({
       },
 
       manifest: {
-        name: 'pwa-shop',
-        short_name: 'pwa-shop',
+        name: 'PWA Shop',
+        short_name: 'PWA Shop',
         description: 'e-commerc shop',
         theme_color: '#ffffff',
         icons: [
