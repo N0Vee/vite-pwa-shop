@@ -75,7 +75,7 @@ const ProductDetailPage = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-4 md:py-8">
         {/* Back Button */}
         <button
           onClick={handleGoBack}

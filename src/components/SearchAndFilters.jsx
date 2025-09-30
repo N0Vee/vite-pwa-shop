@@ -13,9 +13,9 @@ const SearchAndFilters = ({
   onClearFilters 
 }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+    <div className="bg-white rounded-lg shadow-md p-4 md:p-6 mb-6">
       {/* Search Bar */}
-      <div className="mb-6">
+      <div className="mb-4 md:mb-6">
         <div className="relative">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -27,13 +27,13 @@ const SearchAndFilters = ({
             placeholder="Search products..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-gray-900"
+            className="block w-full pl-10 pr-3 py-2 md:py-3 border border-gray-300 rounded-lg leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-gray-900 text-base"
           />
         </div>
       </div>
 
       {/* Filters Row */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-4">
         {/* Category Filter */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">

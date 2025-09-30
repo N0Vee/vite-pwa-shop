@@ -4,20 +4,20 @@ import CartIcon from './CartIcon';
 const Header = () => {
   return (
     <header className="bg-white shadow-md sticky top-0 z-30">
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-7 h-7 md:w-8 md:h-8 bg-orange-500 rounded-lg flex items-center justify-center">
+              <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
               </svg>
             </div>
-            <h1 className="text-xl font-bold text-gray-900">PWA Shop</h1>
+            <h1 className="text-lg md:text-xl font-bold text-gray-900">PWA Shop</h1>
           </Link>
 
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-6">
             <Link to="/" className="text-gray-700 hover:text-orange-600 transition-colors">
               Home
             </Link>
@@ -29,9 +29,18 @@ const Header = () => {
             </Link>
           </nav>
 
-          {/* Cart Icon */}
-          <div className="flex items-center space-x-4">
+          {/* Desktop Cart Icon */}
+          <div className="hidden md:flex items-center space-x-4">
             <CartIcon />
+          </div>
+
+          {/* Mobile Menu Button - Shows on tablet but hides on mobile (bottom nav takes over) */}
+          <div className="md:hidden">
+            <Link to="/cart" className="relative p-2">
+              <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2 8h15M9 19a2 2 0 100 4 2 2 0 000-4zm8 0a2 2 0 100 4 2 2 0 000-4z" />
+              </svg>
+            </Link>
           </div>
         </div>
       </div>

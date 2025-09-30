@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
           onError={handleImageError}
         />
         {product.featured && (
@@ -42,7 +42,7 @@ const ProductCard = ({ product }) => {
       </div>
 
       {/* Product Info */}
-      <div className="p-4">
+      <div className="p-3 md:p-4">
         <div className="mb-2">
           <span className="text-sm text-orange-600 font-medium">{product.category}</span>
         </div>

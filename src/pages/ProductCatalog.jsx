@@ -85,7 +85,7 @@ const ProductCatalog = () => {
 
   return (
     <div className="bg-gradient-to-br from-orange-50 to-white">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-4 md:py-8">
 
         {/* Search and Filters Toggle */}
         <div className="mb-6">
@@ -154,7 +154,7 @@ const ProductCatalog = () => {
 
         {/* Products Grid */}
         {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
             {filteredProducts.map((product) => (
               <ProductCard
                 key={product.id}
@@ -194,23 +194,24 @@ const ProductCatalog = () => {
 
         {/* Featured Categories Banner */}
         {!searchTerm && selectedCategory === 'All Categories' && (
-          <div className="mt-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg p-8 text-white">
+          <div className="mt-8 md:mt-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg p-6 md:p-8 text-white" data-section="categories">
             <div className="text-center">
-              <h2 className="text-3xl font-bold mb-4">Shop by Category</h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Shop by Category</h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4 mt-6 md:mt-8">
                 {categories.slice(1).map((category) => (
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
-                    className="bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg p-4 transition-all duration-200 backdrop-blur-sm"
+                    className="bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg p-3 md:p-4 transition-all duration-200 backdrop-blur-sm"
                   >
-                    <div className="text-sm font-medium">{category}</div>
+                    <div className="text-xs md:text-sm font-medium">{category}</div>
                   </button>
                 ))}
               </div>
             </div>
           </div>
         )}
+
       </div>
 
 

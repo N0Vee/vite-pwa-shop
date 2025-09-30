@@ -34,7 +34,7 @@ const CheckoutSuccessPage = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-4 md:py-8">
         <div className="max-w-2xl mx-auto">
           {/* Success Header */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
