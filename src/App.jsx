@@ -3,6 +3,7 @@ import { CartProvider } from './context/CartContext'
 import ProductCatalog from './pages/ProductCatalog'
 import ProductDetailPage from './pages/ProductDetailPage'
 import CartPage from './pages/CartPage'
+import CheckoutSuccessPage from './pages/CheckoutSuccessPage'
 import Header from './components/Header'
 import PWABadge from './PWABadge.jsx'
 import './App.css'
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<ProductCatalog />} />
             <Route path="/product/:id" element={<ProductDetailPage />} />
             <Route path="/cart" element={<CartPage />} />
+            <Route path="/checkout/success" element={<CheckoutSuccessPage />} />
           </Routes>
           <PWABadge />
         </div>

@@ -28,8 +28,6 @@ const ProductDetailPage = () => {
   const handleAddToCart = () => {
     if (product && product.inStock) {
       addToCart(product, selectedQuantity);
-      // Show success feedback
-      alert(`Added ${selectedQuantity} x "${product.name}" to cart!`);
     }
   };
 

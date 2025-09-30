@@ -9,6 +9,22 @@ const CartPage = () => {
     navigate('/');
   };
 
+  const handleCheckout = () => {
+    // Store cart info for the success page (in a real app, this would be sent to a server)
+    const orderData = {
+      items: cartItems,
+      total: cartTotal,
+      itemCount: cartCount,
+      timestamp: Date.now()
+    };
+    
+    // Clear the cart
+    clearCart();
+    
+    // Navigate to success page
+    navigate('/checkout/success', { state: orderData });
+  };
+
   const handleQuantityChange = (id, newQuantity) => {
     if (newQuantity === 0) {
       removeFromCart(id);
@@ -207,7 +223,10 @@ const CartPage = () => {
                   </div>
 
                   {/* Checkout Button */}
-                  <button className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200 text-lg mt-6">
+                  <button 
+                    onClick={handleCheckout}
+                    className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200 text-lg mt-6"
+                  >
                     Proceed to Checkout
                   </button>
 

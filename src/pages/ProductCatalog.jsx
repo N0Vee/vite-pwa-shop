@@ -9,6 +9,7 @@ const ProductCatalog = () => {
   const [selectedCategory, setSelectedCategory] = useState('All Categories');
   const [selectedPriceRange, setSelectedPriceRange] = useState(priceRanges[0]);
   const [sortBy, setSortBy] = useState('featured');
+  const [isFiltersOpen, setIsFiltersOpen] = useState(false);
 
 
   // Filter and sort products
@@ -85,31 +86,59 @@ const ProductCatalog = () => {
   return (
     <div className="bg-gradient-to-br from-orange-50 to-white">
       <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Autumn Collection
-          </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover our curated selection of autumn essentials. From cozy home decor to seasonal treats,
-            find everything you need to embrace the warm and inviting spirit of fall.
-          </p>
-        </div>
 
-        {/* Search and Filters */}
-        <SearchAndFilters
-          searchTerm={searchTerm}
-          setSearchTerm={setSearchTerm}
-          selectedCategory={selectedCategory}
-          setSelectedCategory={setSelectedCategory}
-          selectedPriceRange={selectedPriceRange}
-          setSelectedPriceRange={setSelectedPriceRange}
-          sortBy={sortBy}
-          setSortBy={setSortBy}
-          categories={categories}
-          priceRanges={priceRanges}
-          onClearFilters={handleClearFilters}
-        />
+        {/* Search and Filters Toggle */}
+        <div className="mb-6">
+          <button
+            onClick={() => setIsFiltersOpen(!isFiltersOpen)}
+            className="flex items-center justify-between w-full bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-200"
+          >
+            <div className="flex items-center space-x-3">
+              <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.414A1 1 0 013 6.707V4z" />
+              </svg>
+              <span className="text-lg font-semibold text-gray-900">
+                Search & Filters
+              </span>
+              {(searchTerm || selectedCategory !== 'All Categories' || selectedPriceRange.label !== 'All Prices' || sortBy !== 'featured') && (
+                <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-medium">
+                  Active
+                </span>
+              )}
+            </div>
+            <svg
+              className={`w-5 h-5 text-gray-500 transform transition-transform duration-200 ${
+                isFiltersOpen ? 'rotate-180' : ''
+              }`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          {/* Collapsible Filters */}
+          <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
+            isFiltersOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}>
+            <div className="mt-4">
+              <SearchAndFilters
+                searchTerm={searchTerm}
+                setSearchTerm={setSearchTerm}
+                selectedCategory={selectedCategory}
+                setSelectedCategory={setSelectedCategory}
+                selectedPriceRange={selectedPriceRange}
+                setSelectedPriceRange={setSelectedPriceRange}
+                sortBy={sortBy}
+                setSortBy={setSortBy}
+                categories={categories}
+                priceRanges={priceRanges}
+                onClearFilters={handleClearFilters}
+              />
+            </div>
+          </div>
+        </div>
 
         {/* Results Summary */}
         <div className="flex justify-between items-center mb-6">

@@ -8,7 +8,14 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group relative">
+      {/* Clickable Link Overlay */}
+      <Link 
+        to={`/product/${product.id}`}
+        className="absolute inset-0 z-10"
+        aria-label={`View details for ${product.name}`}
+      />
+      
       {/* Product Image */}
       <div className="relative overflow-hidden">
         <img
@@ -83,18 +90,12 @@ const ProductCard = ({ product }) => {
           </div>
         </div>
 
-        {/* Action Buttons */}
-        <div className="space-y-2 mt-4">
+        {/* Add to Cart Button */}
+        <div className="mt-4 relative z-20">
           <AddToCartButton 
             product={product}
             className="w-full py-2 px-4"
           />
-          <Link
-            to={`/product/${product.id}`}
-            className="w-full py-2 px-4 border border-orange-500 text-orange-500 hover:bg-orange-50 rounded-lg font-semibold transition-colors duration-200 block text-center"
-          >
-            View Details
-          </Link>
         </div>
       </div>
     </div>
